@@ -4,7 +4,6 @@ from pydantic import BaseModel
 
 app = FastAPI()
 
-# Conexión a SQLite (archivo local)
 DB_PATH = "database.db"
 
 def init_db():
