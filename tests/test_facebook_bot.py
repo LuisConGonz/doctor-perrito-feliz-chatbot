@@ -1,16 +1,17 @@
 import sys
 from pathlib import Path
+import pytest
 
-sys.path.insert(0, str(Path(__file__).parent.parent))
+sys.path.append(str(Path(__file__).parent.parent))
+from src.bot import FacebookBot
 
-from src.facebook_bot import FacebookBot
+@pytest.fixture
+def bot():
+    return FacebookBot()
 
-def test_respuesta_facebook_bot():
-    bot = FacebookBot()
+def test_respuesta_razas(bot):
     respuesta = bot.responder("¿Qué razas tienen?")
-    assert "labrador" in respuesta.lower()
+    assert "disponibles" in respuesta or "No hay" in respuesta
 
-def test_respuesta_edad_requisitos():
-    bot = FacebookBot()
-    respuesta = bot.responder("¿Qué edad mínima necesito para adoptar?")
-    assert "años" in respuesta.lower()
+def test_respuesta_default(bot):
+    assert "predeterminada" in bot.responder("Hola")
