@@ -29,4 +29,4 @@ graph TD
     A[Usuario] --> B[WhatsApp/Facebook]
     B --> C[ChatBot Python]
     C --> D[(SQLite/PostgreSQL)]
-    C --> E[Panel Admin Flask]                                                                                     Licencia MIT - © 2023 Doctor Perrito Feliz
+    C --> E[Panel Admin Flask]                                                                                     Licencia MIT - © 2023 Doctor Perrito Feliz 
