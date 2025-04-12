@@ -24,9 +24,10 @@ Solución
 - Panel de administración para actualizar datos
 
  Arquitectura
+```markdown
 ```mermaid
-graph TD
-    A[Usuario] --> B[WhatsApp/Facebook]
-    B --> C[ChatBot Python]
-    C --> D[(SQLite/PostgreSQL)]
-    C --> E[Panel Admin Flask]                                                                                     Licencia MIT - © 2023 Doctor Perrito Feliz 
+flowchart TD
+    A[Usuario] --> B[Redes Sociales]
+    B --> C[ChatBot]
+    C --> D[Base de Datos]
+    C --> E[Panel Admin]                                                                                             Licencia MIT - © 2023 Doctor Perrito Feliz 
